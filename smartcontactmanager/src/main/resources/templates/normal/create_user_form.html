@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>This is about page</title>
+</head>
+<body>
+	<section>
+		<div class="card mr-3">
+		
+		  <div class="card-body">
+		  
+		   <h1 class="text-center">Crate New User</h1>
+			   <div class="container-fluid mt-1">
+			   		<div class="row">
+				   		<div class="col-md-10 offset-md-1">
+					   		<form action="#"
+					   				method="post"
+					   				th:object="${wsuser}"
+					   				th:action="@{/user/create-workspace-user}"
+					   				novalidate="novalidate"
+					   				class="mt-2"
+					   		>
+					   		<!-- first name field -->
+					   		<div class="input-group">
+					   		
+					   		   <div class="input-group-prepend">
+					   		       <div class="input-group-text ">
+					   		       		<i class="fa fa-plus"></i>
+					   		       </div>
+					   		   </div>
+					   		   <input required 
+					   		    		type="text" 
+					   		    		name="firstName" 
+					   		    		id="firstName" 
+					   		    		placeholder="Enter first name here" 
+					   		    		class="form-control"
+					   		    		
+					   		    		
+					   		    		/>
+					   		    <!-- <div th:each="e: ${#fields.errors('firstName')}"  th:text="${e}" class="invalid-feedback" >
+					        		
+					      		</div> -->
+					   		</div>
+					   		<!-- second name -->
+					   		<div class="input-group mt-3">
+					   		
+					   		   <div class="input-group-prepend">
+					   		       <div class="input-group-text ">
+					   		       		<i class="fas fa-user-alt"></i>
+					   		       </div>
+					   		   </div>
+					   		    <input required 
+					   		    		type="text" 
+					   		    		name="lastName" 
+					   		    		id="lastName" 
+					   		    		placeholder="Enter last name here" 
+					   		    		class="form-control"
+					   		    		
+					   		    		/>
+					   		   <!--  <div th:each="e: ${#fields.errors('lastName')}" th:text="${e}" class="invalid-feedback">
+					   		    
+					   		    </div> -->
+					   		    		
+					   		</div>
+					   		
+					   		<!-- phone field  -->
+					   		<div class="input-group mt-3">
+					   		
+					   		   <div class="input-group-prepend">
+					   		       <div class="input-group-text ">
+					   		       		<i class="fa fa-phone"></i>
+					   		       </div>
+					   		   </div>
+					   		    <input required 
+					   		    		type="number" 
+					   		    		name="phone" 
+					   		    		id="phone" 
+					   		    		placeholder="Enter Phone Number here" 
+					   		    		class="form-control"
+					   		    		
+					   		    		/>
+					   		    <!-- <div th:each="e: ${#fields.errors('phone')}" th:text="${e}" class="invalid-feedback">
+					   		    	
+					   		    </div> -->
+					   		</div>
+					   		<!--email field  -->
+					   		<div class="input-group mt-3">
+					   		
+					   		   <div class="input-group-prepend">
+					   		       <div class="input-group-text ">
+					   		       		@
+					   		       </div>
+					   		   </div>
+					   		    <input required 
+					   		    	   type="email" 
+					   		    	   name="email" 
+					   		    	   id="email" 
+					   		    	   placeholder="Primary email address" 
+					   		    	   class="form-control"
+					   		    	   
+					   		    	   />
+					   		   	<!-- <div th:each="e: ${#fields.errors('email')}" th:text="${e}" class="invalid-feedback">
+					   		   	
+					   		   	</div> -->
+					   		</div>
+					   		
+					   		
+					   		<div class="container text-center mt-3">
+					   			<button class="btn btn-outline-primary"> Create User</button>
+					   		</div>
+					   	 </form>					   	
+					   </div>
+				   </div>
+			   </div>
+		  </div>
+		</div>
+		
+	</section>
+	
+	<script th:src="@{/js/smart_script.js}"></script>
+</body>
+</html>

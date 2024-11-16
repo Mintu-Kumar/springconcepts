@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Hello</h1>
+
+<h1>User is <span th:text="${isActive} ? 'ACTIVE':'NOT ACTIVE'"></span></h1>
+
+<h1 th:if="${gender}=='M'"> Male</h1>
+<h1 th:unless="${gender}=='M'"> FeMale</h1>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="${#strings.toUpperCase(name)}"></h1>
+<p>The length of the name is <span th:text="${#strings.length(name)}"></span> </p>
+<h1 th:text="${datatime}"></h1>
+ <h1>Hi This is about page</h1>
+ 
+ <div th:with="a=9,b=45, n=${name}">
+ <!-- the value of a and b is local variable that can only use in this div area, you will get 
+ null or empty if try to access outside 
+  -->
+ <h1 Value of a is=> <span th:text="${a}"></span></h1>
+ <h1 Value of b is=> <span th:text="${b}"></span></h1>
+ 
+ </div>
+</body>
+</html>

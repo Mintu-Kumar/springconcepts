@@ -1,0 +1,6 @@
+package com.practice.service;
+
+public interface userService {
+
+	public void save(user);
+}

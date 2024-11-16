@@ -1,0 +1,14 @@
+package com.practice.service;
+
+import com.practice.dao.userRepository;
+
+public class userServiceImpl implements userService {
+
+	private userRepository repository;
+	@Override
+	public void save(user) {
+		
+		
+	}
+
+}

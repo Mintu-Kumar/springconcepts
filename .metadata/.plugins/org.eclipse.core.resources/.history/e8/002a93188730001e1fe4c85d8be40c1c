@@ -1,0 +1,22 @@
+package com.practice.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.practice.service.userService;
+
+@RestController
+@RequestMapping("/user")
+public class UserController {
+	
+	private userService service;
+	
+	@PostMapping("/create")
+	public String userCreate()
+	{
+		
+		return "usercreated";
+	}
+
+}

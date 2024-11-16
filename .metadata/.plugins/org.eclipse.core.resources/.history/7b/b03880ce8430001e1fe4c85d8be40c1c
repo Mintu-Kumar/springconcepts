@@ -1,0 +1,1 @@
+spring.datasource.uri=jdbc:mysql://localhost:3306/interviewpractice

@@ -1,0 +1,11 @@
+package com.practice.service;
+
+public class userServiceImpl implements userService {
+
+	@Override
+	public void save() {
+		
+		
+	}
+
+}
